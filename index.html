@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Study Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="authPage">
+    <div class="auth-box">
+      <h1>AI Study Assistant</h1>
+      <p>Your personal AI powered study buddy</p>
+
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('login')">Login</button>
+        <button class="tab" onclick="showTab('register')">Register</button>
+      </div>
+
+      <div id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="login()">Login</button>
+      </div>
+
+      <div id="registerForm" style="display:none">
+        <input type="text" id="regName" placeholder="Your Name">
+        <input type="email" id="regEmail" placeholder="Email">
+        <input type="password" id="regPassword" placeholder="Password">
+        <button onclick="register()">Register</button>
+      </div>
+
+      <p id="authMsg" style="color:red; margin-top:10px;"></p>
+    </div>
+  </div>
+
+  <div id="chatPage" style="display:none">
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>AI Study Assistant</h2>
+        <button onclick="logout()">Logout</button>
+      </div>
+      <div class="chat-box" id="chatBox"></div>
+      <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Ask me anything..." onkeypress="if(event.key==='Enter') sendMessage()">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
