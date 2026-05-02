@@ -1,4 +1,4 @@
-const API = 'http://localhost:5000/api';
+const API = 'https://ai-study-assistant-teal.vercel.app/api';
 let token = localStorage.getItem('token');
 let userName = localStorage.getItem('userName');
 
